@@ -1,0 +1,266 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #000;
+  color: white;
+}
+
+.fixed-logo {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+.fixed-logo:hover {
+  transform: scale(0.9);
+}
+
+.fixed-logo img {
+  height: 60px;
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.search-box {
+  display: flex;
+  gap: 5px;
+}
+.search-box input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+}
+.search-box button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 600px;
+}
+.carousel-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.carousel-text p {
+  font-size: 1.1rem;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.carousel-indicators span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.carousel-indicators span.active {
+  background: #ffcc00;
+}
+
+/* SECCIONES */
+.simuladores,
+.testimonios,
+.contacto {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.simuladores h2,
+.testimonios h2,
+.contacto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+.simulador-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.testimonios blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  border-left: 4px solid #003366;
+  padding-left: 20px;
+}
+.testimonios cite {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#contacto label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+#contacto input,
+#contacto textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+#contacto button {
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+#contacto button:hover {
+  background-color: #00509e;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #003366;
+  color: white;
+}

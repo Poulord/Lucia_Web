@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Construverse Simuladores</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="sticky">
+    <div class="fixed-logo">
+      <a href="#"><img src="Imagenes/Construverse Solutions.jpg" alt="Logo"></a>
+    </div>
+    <nav class="navbar">
+      <div class="logo">Construverse Solutions</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#simuladores">Simuladores</a></li>
+        <li><a href="#soluciones">Soluciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="Login.html">Iniciar Sesión</a></li>
+      </ul>
+      <div class="search-box">
+        <input type="text" id="barraBusqueda" placeholder="Buscar por categoría">
+        <button onclick="buscar()">🔍</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO / CAROUSEL -->
+  <section class="hero" id="inicio">
+    <div class="carousel" id="carousel">
+      <div class="carousel-item active" style="background-image: url(' https://placehold.co/1920x1080/003366/FFFFFF?text=Aplicación+Móvil');">
+        <div class="carousel-text">
+          <h1>Aplicación Móvil</h1>
+          <p>Accede a nuestros simuladores desde cualquier lugar.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url(' https://placehold.co/1920x1080/003366/FFFFFF?text=Planos+3D');">
+        <div class="carousel-text">
+          <h1>Planos 3D Immersivos</h1>
+          <p>Explora planos en 3D con realidad aumentada y virtual.</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url(' https://placehold.co/1920x1080/003366/FFFFFF?text=Diseño+Interior');">
+        <div class="carousel-text">
+          <h1>Diseño Interiores y Exteriores</h1>
+          <p>Diseña y visualiza espacios de forma interactiva.</p>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <button class="prev" onclick="changeSlide(-1)">❮</button>
+      <button class="next" onclick="changeSlide(1)">❯</button>
+
+      <!-- Indicadores -->
+      <div class="carousel-indicators" id="carousel-indicators"></div>
+    </div>
+  </section>
+
+  <!-- SIMULADORES -->
+  <section class="simuladores" id="simuladores">
+    <h2>Nuestros Simuladores</h2>
+    <div class="simulador-grid">
+      <div class="card">
+        <img src=" https://placehold.co/300x200/003366/FFFFFF?text=VR" alt="VR">
+        <h3>Realidad Virtual</h3>
+        <p>Entrenamiento realista con VR para operadores.</p>
+      </div>
+      <div class="card">
+        <img src=" https://placehold.co/300x200/003366/FFFFFF?text=AR" alt="AR">
+        <h3>Realidad Aumentada</h3>
+        <p>Aprende a manejar maquinaria pesada en entornos seguros.</p>
+      </div>
+      <div class="card">
+        <img src=" https://placehold.co/300x200/003366/FFFFFF?text=MR" alt="MR">
+        <h3>Realidad Mixta</h3>
+        <p>Entrenamiento realista con VR para operadores.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios" id="testimonios">
+    <h2>Testimonios</h2>
+    <blockquote>
+      <p>"La experiencia de entrenamiento en Construverse es inigualable. Me siento más seguro en mi trabajo."</p>
+      <cite>- Juan Pérez</cite>
+    </blockquote>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <form id="contact-form">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <p>Teléfono: (+34) 648-443-251</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Construverse Solutions. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="main.js"></script>
+</body>
+</html>
